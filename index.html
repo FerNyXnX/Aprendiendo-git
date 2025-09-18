@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dbug Agency Creative</title>
+    <meta name="description" content="Landing page moderna, rápida y accesible para convertir visitantes en clientes." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="icon" href="assets/images/logos/dbug-short.svg" type="image/svg" />
+
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="header" data-header>
+      <nav class="nav container" aria-label="Principal">
+        <a href="#" class="brand" aria-label="Inicio">
+          <img src="assets/images/logos/dbug-short.svg" alt="Logotipo de marca llamado Dbug" width="85" height="32" />
+        </a>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+          <span class="visually-hidden">Abrir menú</span>
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <ul id="menu" class="nav__list" role="menubar">
+          <li role="none"><a role="menuitem" href="#beneficios">Beneficios</a></li>
+          <li role="none"><a role="menuitem" href="#testimonios">Testimonios</a></li>
+          <li role="none"><a role="menuitem" href="#precios">Precios</a></li>
+          <li role="none"><a role="menuitem" href="#faqs">FAQs</a></li>
+          <li role="none"><a role="menuitem" class="button button--sm button--ghost" href="#contacto">Contacto</a></li>
+          <li role="none"><a role="menuitem" class="button button--sm button--primary" href="#cta">Comienza ahora</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <h1 id="hero-title" class="hero__title">Lanza más rápido. Convierte mejor.</h1>
+            <p class="hero__subtitle">Una plataforma simple y potente para escalar tu presencia digital sin complicaciones.</p>
+            <div class="hero__actions" id="cta">
+              <a href="#precios" class="button button--primary button--lg">Comienza ahora</a>
+              <a href="#beneficios" class="button button--ghost button--lg">Ver características</a>
+            </div>
+            <p class="hero__note">Prueba gratuita de 14 días • Sin tarjeta de crédito</p>
+          </div>
+          <figure class="hero__media">
+            <img src="assets/images/photos/producto.png" alt="imagen de Producto/servicio de software para empresas" width="720" height="480" loading="eager" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="beneficios" class="section" aria-labelledby="beneficios-title">
+        <div class="container">
+          <h2 id="beneficios-title" class="section__title">Beneficios clave</h2>
+          <div class="grid grid--3">
+            <article class="card reveal">
+              <img class="card__icon" src="assets/images/icons/rocket_launch_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" aria-hidden="true" width="48" height="48" loading="lazy" />
+              <h3 class="card__title">Implementación en minutos</h3>
+              <p class="card__text">Configuración guiada y componentes preconstruidos para que salgas hoy, no mañana.</p>
+            </article>
+            <article class="card reveal">
+              <img class="card__icon" src="assets/images/icons/finance_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" aria-hidden="true" width="48" height="48" loading="lazy" />
+              <h3 class="card__title">Rendimiento óptimo</h3>
+              <p class="card__text">Cargas rápidas y mejores Core Web Vitals para retener a tus usuarios.</p>
+            </article>
+            <article class="card reveal">
+              <img class="card__icon" src="assets/images/icons/lock_open_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" aria-hidden="true" width="48" height="48" loading="lazy" />
+              <h3 class="card__title">Accesibilidad real</h3>
+              <p class="card__text">Etiquetas, roles y contrastes que funcionan para todas las personas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="section section--alt" aria-labelledby="testimonios-title">
+        <div class="container">
+          <h2 id="testimonios-title" class="section__title">Lo que dicen nuestros clientes</h2>
+          <div class="grid grid--2">
+            <figure class="testimonial reveal">
+              <blockquote class="testimonial__quote">“Duplicamos conversiones en dos semanas. La implementación fue impecable.”</blockquote>
+              <figcaption class="testimonial__meta">
+                <img class="testimonial__avatar" src="assets/images/photos/cliente-woman.jpg" alt="Foto de cliente mujer" aria-hidden="true" width="100" height="40" loading="lazy" />
+                <span class="testimonial__name">María López</span>
+                <span class="testimonial__role">CMO, Acme</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonial reveal">
+              <blockquote class="testimonial__quote">“Finalmente un stack que mi equipo entiende y mis usuarios agradecen.”</blockquote>
+              <figcaption class="testimonial__meta">
+                <img class="testimonial__avatar" src="assets/images/photos/cliente-man.jpg" alt="Foto de cliente hombre" aria-hidden="true" width="100" height="40" loading="lazy" />
+                <span class="testimonial__name">Jorge Ramos</span>
+                <span class="testimonial__role">Founder, Startly</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="precios" class="section" aria-labelledby="precios-title">
+        <div class="container">
+          <h2 id="precios-title" class="section__title">Planes simples</h2>
+          <div class="grid grid--3">
+            <article class="plan card reveal" aria-label="Plan Básico">
+              <h3 class="plan__name">Básico</h3>
+              <p class="plan__price">$199 MXN/mes</p>
+              <ul class="plan__features">
+                <li>Landing + Blog</li>
+                <li>Soporte por email</li>
+                <li>Análisis básico</li>
+              </ul>
+              <a class="button button--primary button--full" href="#contacto">Elegir Básico</a>
+            </article>
+            <article class="plan card plan--featured reveal" aria-label="Plan Pro">
+              <span class="badge">Más popular</span>
+              <h3 class="plan__name">Pro</h3>
+              <p class="plan__price">$499 MXN/mes</p>
+              <ul class="plan__features">
+                <li>Todo en Básico</li>
+                <li>Integraciones</li>
+                <li>Soporte prioritario</li>
+              </ul>
+              <a class="button button--primary button--full" href="#contacto">Elegir Pro</a>
+            </article>
+            <article class="plan card reveal" aria-label="Plan Empresa">
+              <h3 class="plan__name">Empresa</h3>
+              <p class="plan__price">A medida</p>
+              <ul class="plan__features">
+                <li>SLAs dedicados</li>
+                <li>Soporte 24/7</li>
+                <li>Onboarding asistido</li>
+              </ul>
+              <a class="button button--ghost button--full" href="#contacto">Habla con ventas</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faqs" class="section section--alt" aria-labelledby="faqs-title">
+        <div class="container">
+          <h2 id="faqs-title" class="section__title">Preguntas frecuentes</h2>
+          <div class="accordion" data-accordion>
+            <details class="accordion__item reveal">
+              <summary class="accordion__summary">¿Necesito tarjeta para la prueba?</summary>
+              <div class="accordion__panel">
+                <p>No. Empiezas sin tarjeta y puedes cancelar en cualquier momento.</p>
+              </div>
+            </details>
+            <details class="accordion__item reveal">
+              <summary class="accordion__summary">¿Puedo cancelar cuando quiera?</summary>
+              <div class="accordion__panel">
+                <p>Sí, sin penalizaciones ni permanencia.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section" aria-labelledby="contacto-title">
+        <div class="container">
+          <h2 id="contacto-title" class="section__title">Hablemos</h2>
+          <form class="form reveal" novalidate data-form>
+            <div class="form__grid">
+              <div class="form__field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" required autocomplete="name" />
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+              <div class="form__field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+              <div class="form__field form__field--full">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+              <div class="form__field form__field--full">
+                <label class="checkbox">
+                  <input type="checkbox" id="acepto" required />
+                  <span>Acepto la política de privacidad</span>
+                </label>
+                <p class="form__error" aria-live="polite"></p>
+              </div>
+            </div>
+            <button type="submit" class="button button--primary">Enviar</button>
+            <p class="form__success" role="status" aria-live="polite" hidden>¡Gracias! Te contactaremos pronto.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <img src="assets/images/logos/dbug-short.svg" alt="Logotipo de marca llamado Dbug" width="50" height="28" loading="lazy" />
+          <p class="footer__text">Hecho con cuidado, enfoque y propósito.</p>
+        </div>
+        <nav aria-label="Secundario">
+          <ul class="footer__links">
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <small>&copy; 2025 Desarrollado por Dbug.</small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/dist/js/main.js" defer></script>
+  </body>
+</html>
