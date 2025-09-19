@@ -1,0 +1,86 @@
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in oklab, var(--color-bg) 92%, black);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(8px);
+  &.is-sticky { box-shadow: var(--shadow); }
+}
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-block: $sp-4;
+
+  .brand { display: inline-flex; align-items: center; gap: $sp-3; }
+
+  &__toggle {
+    background: transparent; border: 1px solid var(--color-border);
+    color: var(--color-text); padding: .5rem; border-radius: 8px; display: inline-flex;
+  }
+  &__toggle:focus-visible { @include focus-ring; }
+
+  &__list {
+    position: fixed; inset-inline: 0; top: 64px; background: var(--color-bg);
+    display: grid; gap: $sp-3; padding: $sp-5; transform: translateY(-120%);
+    transition: transform .25s ease; border-top: 1px solid var(--color-border);
+
+    /* 🎯 Animación de línea solo para enlaces que NO son botones */
+    li a:not(.button) {
+      position: relative;
+      display: inline-block;
+      padding-block: 0.25rem;
+      color: var(--color-text);
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--color-primary);
+        transition: width 0.3s ease;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: var(--color-primary);
+      }
+
+      &:hover::after,
+      &:focus-visible::after {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond(md) {
+    &__toggle { display: none; }
+    &__list {
+      position: static; transform: none; display: flex; gap: $sp-4; padding: 0; border-top: 0; background: transparent;
+    }
+  }
+
+  &.is-open &__list { transform: translateY(0); }
+}
+
+.hero {
+  padding-block: $sp-8;
+  &__grid {
+    display: grid; gap: $sp-6;
+    @include respond(md){ grid-template-columns: 1.2fr 1fr; align-items: center; }
+  }
+  &__title { font-size: clamp(2rem, 1.6rem + 2vw, 3rem); margin: 0 0 $sp-3; }
+  &__subtitle { color: var(--color-muted); margin: 0 0 $sp-5; max-width: 60ch; }
+  &__actions { display: flex; gap: $sp-3; flex-wrap: wrap; }
+  &__note { color: var(--color-muted); margin-top: $sp-3; font-size: .95rem; }
+  &__media { filter: drop-shadow(0 30px 60px rgba(0,0,0,.35)); }
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  &__grid { @include container; display: grid; gap: $sp-6; padding-block: $sp-6; grid-template-columns: 1fr; @include respond(md){ grid-template-columns: 1.5fr 1fr; } }
+  &__links { display: grid; gap: $sp-2; }
+  &__text { color: var(--color-muted); margin-top: $sp-3; }
+  &__bottom { border-top: 1px solid var(--color-border); padding-block: $sp-4; color: var(--color-muted); }
+}

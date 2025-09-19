@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #0b0d12;
+  --color-surface: #11141a;
+  --color-text: #e6e9ef;
+  --color-muted: #a6adbb;
+  --color-primary: #6ee7b7;
+  --color-primary-600: #34d399;
+  --color-border: #222734;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+$container-max: 1200px;
+$sp-1: 0.25rem; $sp-2: 0.5rem; $sp-3: 0.75rem; $sp-4: 1rem; $sp-5: 1.5rem; $sp-6: 2rem; $sp-7: 3rem; $sp-8: 4rem;
+
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;

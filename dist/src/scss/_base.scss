@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after { 
+  box-sizing: border-box; 
+}
+
+html, body { 
+  height: 100%; 
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--color-text);
+  background: radial-gradient(1200px 800px at 10% -20%, #121826, #0b0d12);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { 
+  display: block; 
+  max-width: 100%; 
+  height: auto;
+}
+
+ul, li { list-style: none; }
+
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+a:hover { 
+  text-decoration: none; 
+}
+
+.container { 
+  @include container; 
+}
+
+.skip-link {
+  position: absolute; 
+  left: -9999px; 
+  top: auto;
+}
+.skip-link:focus { 
+  left: 1rem; 
+  top: 1rem; 
+  background: var(--color-surface); 
+  padding: .5rem 1rem; 
+  border-radius: 6px; 
+}
+
+.visually-hidden { 
+  position: absolute !important; 
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  border: 0; 
+  padding: 0; 
+  white-space: nowrap; 
+  clip-path: inset(100%); 
+  clip: rect(0 0 0 0); 
+  overflow: hidden; 
+}
+
+/* =========================
+   Form baseline
+   ========================= */
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0; /* elimina margen UA */
+  accent-color: var(--color-primary); /* opcional */
+}
+
+/* =========================
+   Bloque checkbox específico
+   ========================= */
+label.checkbox {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: $sp-3;
+  cursor: pointer;
+}
+
+label.checkbox > input[type="checkbox"] {
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-top: .125em; // ajuste óptico
+  flex-shrink: 0;
+}
+
+label.checkbox > span {
+  line-height: 1.5;
+}
+
+/* Responsive */
+@include respond(xs) {
+  label.checkbox {
+    grid-template-columns: 1fr; /* apila checkbox y texto */
+    align-items: center;
+  }
+
+  label.checkbox > input[type="checkbox"] {
+    margin-top: 0;
+    margin-bottom: $sp-2; /* espacio entre casilla y texto */
+  }
+}
+
+@include respond(xs) {
+  .testimonial__meta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial__name,
+  .testimonial__role {
+    font-size: 1rem;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+.section { 
+  padding-block: $sp-7; 
+}
+.section--alt { 
+  background: var(--color-surface); 
+}
+.section__title { 
+  margin: 0 0 $sp-5; 
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); 
+}
+
+.grid {
+  display: grid; 
+  gap: $sp-5;
+}
+.grid--2 { 
+  grid-template-columns: 1fr; 
+  @include respond(md){ grid-template-columns: repeat(2, 1fr); } 
+}
+.grid--3 { 
+  grid-template-columns: 1fr; 
+  @include respond(md){ grid-template-columns: repeat(3, 1fr); } 
+}
