@@ -1,0 +1,13 @@
+/* src/scss/main.scss */
+@import "./variables";
+@import "./mixins";
+@import "./base";
+@import "./layout";
+@import "./components";
+@import "./utilities";
+
+/* Ajustes específicos de la home */
+.hero__title {
+  background: linear-gradient(90deg, #fff, var(--color-primary));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
